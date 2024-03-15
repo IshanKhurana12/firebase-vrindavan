@@ -116,8 +116,8 @@ async function isAdmin(idToken) {
             {users && users.length > 0 ? (
               users.map((user) => (
                
-                <div className="card">
-  <div className="img" key={user.uid}></div>
+                <div  key={user.uid} className="card">
+  <div className="img"></div>
   <div className="textBox">
     <div className="textContent">
       <p className="h1">{user.email}</p>

@@ -67,7 +67,7 @@ export default function Deleteproducts() {
          <div  key={id} className="flex flex-col m-10 bg-white w-72 h-48 rounded-md py-4 px-6 border">
          <h3 className="text-center font-bold text-xl text-gray-800 pb-2">₨-{item.price}</h3>
          <h3 className="text-base font-semibold text-gray-900">{item.name}</h3>
-         <p className="text-sm text-gray-500 pb-3">{item.desc}</p>
+      
          <img 
                              src={item.thumbnailUrl}
                              alt={item.name}
