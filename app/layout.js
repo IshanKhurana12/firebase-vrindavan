@@ -3,6 +3,7 @@ import "./globals.css";
 import Nav from "./Components/Nav";
 const inter = Inter({ subsets: ["latin"] });
 import Switch from "./Components/Switch";
+import Script from "next/script";
 
 export const metadata = {
   title: "Create Next App",
@@ -11,6 +12,8 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
+    <>
+   
     <html lang="en">
       <body className={inter.className}>
       
@@ -27,5 +30,7 @@ export default function RootLayout({ children }) {
        
         </body>
     </html>
+    <Script src="https://checkout.razorpay.com/v1/checkout.js" />
+    </>
   );
 }

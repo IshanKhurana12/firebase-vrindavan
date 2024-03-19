@@ -2,7 +2,7 @@
 import { useState, useEffect } from "react";
 import { db } from "../firebase_config";
 import { collection, query, where, getDocs } from "firebase/firestore";
-
+import BuyProduct from "./BuyProduct";
 function Productinfo({ productName }) {
     const [product, setProduct] = useState(null);
 
@@ -58,9 +58,8 @@ function Productinfo({ productName }) {
                             <div  className=" text-gray-200 text-lg mb-2">Price: <span className="text-green-600 font-semibold">${product.price}</span></div>
                            
                             <div className="text-gray-200 text-lg mb-6">Description: {product.desc}</div>
-                            <div className="flex space-x-4">
-                                
-                                <button className="bg-green-500 text-white py-3 px-8 rounded-md shadow-md hover:bg-green-600 transition duration-300">Buy Now</button>
+                            <div className="flex space-x-4">    
+                               <BuyProduct product={product}/>
                             </div>
                         </div>
                     </div>
